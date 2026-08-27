@@ -1,0 +1,27 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Variáveis de ambiente locais
+.env
+
+# Outputs de treino e cache HuggingFace
+outputs_lora/
+outputs_lora_backup_300/
+unsloth_compiled_cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Logs
+*.log
+
+# Fontes de dados (grandes — baixadas via fetch_data.sh)
+docs-laravel/
+php_manual_en/
+laravel_source/
+Posts.xml
+Posts.xml.*
+
+# Sessões locais do agent
+data/sessions/

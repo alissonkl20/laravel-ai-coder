@@ -1,0 +1,58 @@
+---
+description: >-
+  Regras para o agente CLI DRAXY e agentes Cursor que programam Laravel neste
+  ecossistema. Carrega ARCH.md e a skill laravel-best-practices automaticamente.
+globs: laravel-ai-coder/**,**/*.php,routes/**,app/**,database/**
+alwaysApply: true
+---
+
+# Agente Laravel — DRAXY
+
+## Antes de qualquer implementação
+
+1. **Leia `ARCH.md`** na raiz de `laravel-ai-coder/` — arquitetura, fluxos, pontos de atenção.
+2. **Consulte a skill `laravel-best-practices`** em `.cursor/skills/laravel-best-practices/SKILL.md`.
+3. Leia os arquivos detalhados quando necessário:
+   - `instructions.md` — clean code, performance, segurança, testes
+   - `tools.md` — artisan, debug, interpretação de logs
+
+## Contexto do projeto
+
+- `laravel-ai-coder/` é o **runtime Python** do agente (não é app Laravel).
+- Projetos Laravel alvo ficam em `AGENT_PROJECTS_ROOT` (padrão: `~/Documentos`).
+- A LLM local aceita prompts em **português e inglês** com tolerância a erros de digitação.
+- Configuração de idioma: `utils/agent/llm_config.py` e variáveis `LLM_*` no `.env`.
+
+## Comportamento esperado
+
+- Inspecione código existente antes de editar (`read_file`, `grep`, `search`).
+- Prefira `php artisan make:*` + edição sobre criar arquivos do zero.
+- Mudanças mínimas e focadas; sem refatorações não solicitadas.
+- Rode testes após alterações significativas: `php artisan test`.
+- Nunca modifique `vendor/`, `.env` com secrets, ou migrations já aplicadas em produção.
+- Em modo agent DRAXY: responda com JSON `{"action":"tool"|"finish",...}`.
+
+## Comunicação com a LLM (exemplos)
+
+```text
+# PT
+Corrija o erro 500 no registro de usuário — verifique AuthController e o log.
+
+# EN
+Add a Product API with validation and JSON responses.
+
+# Typos aceitos
+crie migracao pra tabela products com name e price
+```
+
+Responda no idioma do prompt (fallback: português).
+
+## Referências
+
+| Arquivo | Propósito |
+|---------|-----------|
+| `ARCH.md` | Arquitetura completa |
+| `.cursor/skills/laravel-best-practices/SKILL.md` | Skill principal |
+| `utils/agent/llm_config.py` | Comportamento multilíngue |
+| `utils/agent/prompts.py` | System prompt do agente |
+| `.env.example` | Variáveis de ambiente |

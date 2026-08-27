@@ -1,0 +1,2 @@
+# torch 2.12.x: >=2.11 (bitsandbytes/transformers) e <2.13 (unsloth-zoo)
+torch==2.12.1

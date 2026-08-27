@@ -1,0 +1,23 @@
+# Python 3.14 + CUDA: instale torch antes (ver README):
+#   pip install torch==2.12.1 --index-url https://download.pytorch.org/whl/cu126
+#   pip install -r requirements.txt -c constraints.txt
+
+# HuggingFace ecosystem — Qwen2.5-Coder
+transformers>=4.46.0
+accelerate>=1.2.0
+bitsandbytes>=0.44.0
+peft>=0.14.0
+trl>=0.12.0
+datasets>=3.2.0
+
+# Animação ASCII no terminal (ascii_animation.py)
+Pillow>=10.0.0
+
+# Configuração e utilitários
+python-dotenv>=1.0.0
+beautifulsoup4>=4.12.0
+redis>=5.0.0
+
+# Unsloth com suporte a Qwen2.5 (versão mais recente via Git)
+unsloth @ git+https://github.com/unslothai/unsloth.git
+unsloth_zoo @ git+https://github.com/unslothai/unsloth-zoo.git

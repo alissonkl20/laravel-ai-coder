@@ -1,0 +1,86 @@
+{
+  "shortcuts": [
+    {
+      "name": "new-project",
+      "aliases": ["/new-project", "/laravel-new", "new-project", "laravel-new"],
+      "description": "Cria app Laravel em ~/Documentos (ex: /new-project ruff)",
+      "type": "task",
+      "template": "Crie um projeto Laravel do zero chamado {args} em Documentos (laravel new)."
+    },
+    {
+      "name": "mkdir",
+      "aliases": ["/mkdir", "mkdir"],
+      "description": "Cria diretório no projeto (ex: /mkdir app/Services)",
+      "type": "tool",
+      "tool": "mkdir",
+      "args": { "path": "{args}" }
+    },
+    {
+      "name": "touch",
+      "aliases": ["/touch", "touch", "/new"],
+      "description": "Cria arquivo vazio (ex: /touch app/Helpers/StrHelper.php)",
+      "type": "tool",
+      "tool": "write_file",
+      "args": { "path": "{args}", "content": "" }
+    },
+    {
+      "name": "migration",
+      "aliases": ["/migration", "/migrate", "migration"],
+      "description": "Gera migration (ex: /migration create_users_table)",
+      "type": "task",
+      "template": "Crie uma migration Laravel completa para: {args}. Use Schema::create com up/down."
+    },
+    {
+      "name": "model",
+      "aliases": ["/model", "model"],
+      "description": "Gera Model Eloquent (ex: /model Product)",
+      "type": "task",
+      "template": "Crie um Model Eloquent Laravel '{args}': 1) run_command php artisan make:model {args} -m 2) edite a migration e o model com fillable e casts() (Laravel 11+)."
+    },
+    {
+      "name": "controller",
+      "aliases": ["/controller", "controller"],
+      "description": "Gera Controller (ex: /controller ProductController)",
+      "type": "task",
+      "template": "Crie um Controller Laravel '{args}' com métodos index e store, validação de request e respostas JSON."
+    },
+    {
+      "name": "resource",
+      "aliases": ["/resource", "resource"],
+      "description": "Gera rota resource (ex: /resource products ProductController)",
+      "type": "task",
+      "template": "Crie Route::resource em routes/web.php para '{args}' usando o controller indicado. Inclua use statement."
+    },
+    {
+      "name": "artisan",
+      "aliases": ["/artisan", "artisan"],
+      "description": "Roda php artisan (ex: /artisan route:list)",
+      "type": "command",
+      "template": "php artisan {args}"
+    },
+    {
+      "name": "log",
+      "aliases": ["/log", "log"],
+      "description": "Mostra últimas linhas do laravel.log",
+      "type": "tool",
+      "tool": "tail_log",
+      "args": { "lines": 80 }
+    },
+    {
+      "name": "ls",
+      "aliases": ["/ls", "ls"],
+      "description": "Lista diretório (ex: /ls app/Models)",
+      "type": "tool",
+      "tool": "list_dir",
+      "args": { "path": "{args}" }
+    },
+    {
+      "name": "search",
+      "aliases": ["/search", "search"],
+      "description": "Busca indexada (ex: /search model fillable)",
+      "type": "tool",
+      "tool": "search",
+      "args": { "query": "{args}" }
+    }
+  ]
+}

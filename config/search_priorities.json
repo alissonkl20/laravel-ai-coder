@@ -1,0 +1,89 @@
+{
+  "priorities": [
+    {
+      "tag": "auth",
+      "keywords": ["login", "logout", "auth", "autenticação", "password", "senha", "attempt", "guard"],
+      "boost": 105
+    },
+    {
+      "tag": "seeder",
+      "keywords": ["seeder", "db:seed", "factory", "seed"],
+      "boost": 102
+    },
+    {
+      "tag": "mkdir",
+      "keywords": ["mkdir", "pasta", "diretorio", "diretório", "folder", "criar pasta"],
+      "boost": 100
+    },
+    {
+      "tag": "file_create",
+      "keywords": ["touch", "novo arquivo", "criar arquivo", "new file", "write_file"],
+      "boost": 95
+    },
+    {
+      "tag": "model",
+      "keywords": ["model", "eloquent", "fillable", "casts", "app\\models"],
+      "boost": 90
+    },
+    {
+      "tag": "controller",
+      "keywords": ["controller", "http\\controllers", "jsonresponse", "store", "index"],
+      "boost": 88
+    },
+    {
+      "tag": "migration",
+      "keywords": ["migration", "schema", "blueprint", "create table", "migrate"],
+      "boost": 85
+    },
+    {
+      "tag": "performance",
+      "keywords": ["n+1", "eager", "with(", "cache", "index", "otimiz", "performance", "wherehas"],
+      "boost": 84
+    },
+    {
+      "tag": "artisan",
+      "keywords": ["artisan", "php artisan", "make:", "route:list"],
+      "boost": 80
+    },
+    {
+      "tag": "routes",
+      "keywords": ["route", "routes", "web.php", "api.php", "resource", "apiresource"],
+      "boost": 75
+    },
+    {
+      "tag": "middleware",
+      "keywords": ["middleware", "handle request"],
+      "boost": 70
+    },
+    {
+      "tag": "validation",
+      "keywords": ["validation", "formrequest", "rules", "validate"],
+      "boost": 68
+    },
+    {
+      "tag": "policy",
+      "keywords": ["policy", "authorize", "gate", "can("],
+      "boost": 66
+    },
+    {
+      "tag": "job",
+      "keywords": ["job", "queue", "dispatch", "shouldqueue"],
+      "boost": 64
+    },
+    {
+      "tag": "log",
+      "keywords": ["log", "laravel.log", "exception", "stack trace", "error"],
+      "boost": 65
+    },
+    {
+      "tag": "test",
+      "keywords": ["php artisan test", "phpunit", "feature test", "assertcreated", "assertstatus"],
+      "boost": 96
+    },
+    {
+      "tag": "agent",
+      "keywords": ["action", "tool", "finish", "read_file", "write_file", "run_command", "scaffold_php", "replace_in_file"],
+      "boost": 110
+    }
+  ]
+}

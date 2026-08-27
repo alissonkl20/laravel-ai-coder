@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Wrapper Cursor-like para o DRAXY agent CLI.
+# Uso:
+#   ./bin/draxy
+#   ./bin/draxy -p my-app --mode=ask
+#   ./bin/draxy -p my-app -t "como funciona o Eloquent?"
+#   ./bin/draxy --list-sessions
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+exec bash "${ROOT}/initial.sh" --here "$@"
